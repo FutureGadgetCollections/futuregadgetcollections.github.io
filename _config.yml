@@ -12,12 +12,12 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Future Gadget Collections"
+title                    : "Future Gadget Labs, Collections, and Investments"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     :
@@ -185,15 +185,10 @@ exclude:
   - gulpfile.js
   - LICENSE
   - log
-  - minimal-mistakes-jekyll.gemspec
   - node_modules
-  - package.json
   - package-lock.json
-  - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
   - .svn
@@ -312,28 +307,18 @@ compress_html:
     envs: development
 
 
-collections_dir: content
 
 # Collections
 collections:
-  pokemon:
+  collectible:
     output: true
-    permalink: /:collection/:path/
-  bobbleheads:
+    permalink: /portfolio-summary/:collection/:path/
+  crypto:
     output: true
-    permalink: /:collection/:path/
-  legos:
+    permalink: /portfolio-summary/:collection/:path/
+  stock:
     output: true
-    permalink: /:collection/:path/
-  funkopops:
-    output: true
-    permalink: /:collection/:path/
-  mtg:
-    output: true
-    permalink: /:collection/:path/
-  weissschwarz:
-    output: true
-    permalink: /:collection/:path/
+    permalink: /portfolio-summary/:collection/:path/
 
 # Defaults
 defaults:
@@ -343,27 +328,23 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: # true
-      share: true
+      share: false
       related: true
-  # _pokemon
+  # _posts/sales - Custom permalink for sales posts
   - scope:
-      path: ""
-      type: pokemon
+      path: "_posts/sales"
+      type: posts
     values:
-      layout: single
-      author_profile: false
-      share: true
-  # _bobbleheads
+      permalink: /invoices/sales/:title/
+  # _posts/purchases - Custom permalink for purchase posts
   - scope:
-      path: ""
-      type: bobbleheads
+      path: "_posts/purchases"
+      type: posts
     values:
-      layout: single
-      author_profile: false
-      share: true
+      permalink: /invoices/purchases/:title/
   # _legos
   - scope:
       path: ""
@@ -372,26 +353,42 @@ defaults:
       layout: single
       author_profile: false
       share: true
-  # _funkopops
+  # _purchases
   - scope:
       path: ""
-      type: funkopops
+      type: purchases
     values:
       layout: single
       author_profile: false
       share: true
-  # _mtg
+  # _sales
   - scope:
       path: ""
-      type: mtg
+      type: sales
     values:
       layout: single
       author_profile: false
       share: true
-  # _weissschwarz
+  # _portfolio-summary
   - scope:
       path: ""
-      type: weissschwarz
+      type: portfolio-summary
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: false
+      share: true
+  # _guide
+  - scope:
+      path: ""
+      type: guide
     values:
       layout: single
       author_profile: false
