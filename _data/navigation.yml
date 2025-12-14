@@ -1,0 +1,27 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "Collections"
+    url: /collections/
+  - title: "Blog"
+    url: /blog/
+  - title: "Invoices"
+    url: /invoices/
+  - title: "About"
+    url: /about/
+
+# Collections submenu
+collections:
+  - title: "Pokemon"
+    url: /collections/pokemon/
+  - title: "Bobbleheads"
+    url: /collections/bobbleheads/
+  - title: "Legos"
+    url: /collections/legos/
+  - title: "Funko Pops"
+    url: /collections/funkopops/
+  - title: "Magic: The Gathering"
+    url: /collections/mtg/
+  - title: "Weiss Schwarz"
+    url: /collections/weissschwarz/
