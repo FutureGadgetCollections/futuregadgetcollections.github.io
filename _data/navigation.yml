@@ -2,7 +2,7 @@
 main:
   - title: "Home"
     url: /
-  - title: "Collectible Portfolio Summary"
+  - title: "Asset Portfolio Summary"
     url: /portfolio-summary/
   - title: "About"
     url: /about/
